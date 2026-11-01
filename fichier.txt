@@ -1,0 +1,38 @@
+Début
+    Initialiser longueur à 0
+    Initialiser nombre_mots à 0
+    Initialiser nombre_voyelles à 0
+    Définir la chaîne voyelles = "aeiouyAEIOUY"
+    Initialiser mot_en_cours à Faux
+
+    Afficher "Entrez une phrase qui se termine par un point :"
+    
+    Tant que vrai
+        Lire un caractère
+        Si le caractère n'est pas un seul caractère
+            Afficher "Veuillez entrer un seul caractère à la fois"
+            Continuer la boucle
+
+        Ajouter 1 à longueur
+        
+        Si le caractère est une voyelle (présente dans voyelles)
+            Ajouter 1 à nombre_voyelles
+
+        Si le caractère est un espace
+            Mettre mot_en_cours à Faux
+
+        Sinon, si le caractère est un point "."
+            Si mot_en_cours est vrai
+                Ajouter 1 à nombre_mots
+            Fin de la boucle
+
+        Sinon
+            Si mot_en_cours est faux
+                Ajouter 1 à nombre_mots
+            Mettre mot_en_cours à vrai
+
+    Afficher "Résultats :"
+    Afficher "Longueur de la phrase : " + longueur
+    Afficher "Nombre de mots : " + nombre_mots
+    Afficher "Nombre de voyelles : " + nombre_voyelles
+Fin
